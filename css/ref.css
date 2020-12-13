@@ -1,12 +1,17 @@
-/*html { background-color: #f8f8f8;}
-body { background:       #f8f8f8; }ZZ */
-
 h1 {
     font-family: sans-serif;
     font-size: 220%;
     color: #274f83;
     margin-top: 0;
     padding-top: 0;
+}
+
+.news h2 {
+    font-family: sans-serif;
+    font-size: 180%;
+    color: #aa0000;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 h2 {
     font-family: sans-serif;
@@ -16,7 +21,7 @@ h2 {
     margin-right: 0%;
 }
 
-h3.news
+.news h3
 {
     font-family: sans-serif;
     font-size: 120%;
@@ -37,13 +42,15 @@ p {
     color: #444444;
 }
 
-p.news {
-    margin-left: 0%;
-    margin-right: 0%;
+.news p{
     color: #aa0000;
 }
 
-p.test{
+.news {
+    color: #aa0000;
+}
+
+.test p{
     margin-left: 0%;
     font-size: 80%;
     color: #550000;

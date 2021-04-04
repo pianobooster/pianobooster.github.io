@@ -130,30 +130,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header">
 <h1 class="title">Downloads</h1>
 </header>
-<p>The <strong>PianoBooster</strong> executables now includes a built-in sound generator called <strong>FluidSynth</strong>. In order for this to work a General MIDI (GM) SoundFont is required. Since this is quite a large file its not necessarily included with the executable. The recommend SoundFont is called <strong>FluidR3_GM</strong>. Use the Piano Booster ‘Setup/Midi Setup’ menu option and then click on the FluidSynth tab and use the load button to install the SoundFont file.</p>
+<nav id="TOC">
 <ul>
-<li><a href="https://github.com/pianobooster/fluid-soundfont/releases/download/v3.1/FluidR3_GM.sf2">FluidR3_GM.sf2</a> – 142 MB General MIDI SoundFont.</li>
+<li><a href="#version-1.0.0-latest-stable">Version 1.0.0 (latest stable)</a><ul>
+<li><a href="#windows">Windows:</a></li>
+<li><a href="#mac-os">Mac OS:</a></li>
+<li><a href="#linux-appimage-64-bit">Linux AppImage (64 bit):</a></li>
+<li><a href="#recommend-soundfont">Recommend SoundFont:</a></li>
+<li><a href="#md5-sums">MD5 sums</a></li>
+</ul></li>
+<li><a href="#what-is-new">What is new</a></li>
+<li><a href="#requirements">Requirements</a><ul>
+<li><a href="#midi-files">MIDI files</a></li>
+<li><a href="#midi-keyboard">MIDI keyboard</a></li>
+</ul></li>
+<li><a href="#previous-releases">Previous releases</a></li>
 </ul>
-<h2 id="version-1.0.0-latest-stable">Version 1.0.0 (latest stable)</h2>
+</nav>
+<h1 id="version-1.0.0-latest-stable">Version 1.0.0 (latest stable)</h1>
+<p>The <strong>PianoBooster</strong> executables now includes a built-in sound generator called <strong>FluidSynth</strong>. In order for this to work a General MIDI (GM) SoundFont is required. Since this is quite a large file its not necessarily included with the executable. See below for the recommend SoundFont.</p>
 <h3 id="windows">Windows:</h3>
 <p>There is now an installer/uninstaller for windows. Just download and run this setup program which also includes the recommend SoundFont.</p>
 <ul>
 <li><a href="https://github.com/pianobooster/PianoBooster/releases/download/v1.0.0/PianoBoosterInstall-SF-1.0.0.exe">PianoBoosterInstall-SF-1.0.0.exe</a> – 143Mb (with SoundFont)</li>
 </ul>
 <h3 id="mac-os">Mac OS:</h3>
+<p>Unfortunately executables built on one macOS version may not work on a different version and so you may need to try both of these builds:</p>
 <ul>
-<li><a href="https://github.com/pianobooster/PianoBooster/releases/download/v1.0.0/PianoBooster-macOS-1.0.0.dmg">PianoBooster-macOS-1.0.0.dmg</a> – 12.8Mb (without SoundFont)</li>
+<li><a href="https://github.com/pianobooster/PianoBooster/releases/download/v1.0.0/PianoBooster-macos-10.15-1.0.0.dmg">PianoBooster-macos-10.15-1.0.0.dmg</a> – 12.8Mb built on 10.15 Catalina (SoundFont not included)</li>
+<li><a href="https://github.com/pianobooster/PianoBooster/releases/download/v1.0.0/PianoBooster-macOS-1.0.0.dmg">PianoBooster-macOS-1.0.0.dmg</a> – 12.8Mb built on 10.11 El Capitan (SoundFont not included)</li>
 </ul>
-<p>The mac version does not include a sound font so you will need to download a General-MIDI SoundFont. See above for a suitable SoundFont.</p>
+<p>These mac versions does not include a General-MID sound font. See below for the <a href="#recommend-soundfont">recommend SoundFont</a>.</p>
 <h3 id="linux-appimage-64-bit">Linux AppImage (64 bit):</h3>
 <ul>
-<li><a href="https://github.com/pianobooster/PianoBooster/releases/download/v1.0.0/PianoBooster-1.0.0-x86_64.AppImage">PianoBooster-1.0.0-x86_64.AppImage</a> – 8Mb (without SoundFont)</li>
+<li><a href="https://github.com/pianobooster/PianoBooster/releases/download/v1.0.0/PianoBooster-1.0.0-x86_64.AppImage">PianoBooster-1.0.0-x86_64.AppImage</a> – 8Mb (SoundFont not included</li>
 </ul>
 <p>For Linux users there is now no need to compile from source instead just download the PianoBooster AppImage set the executable bit and then run the AppImage. This version includes the built in Fluid Synth sound generator but does not include a sound font. Please install the <code>fluid-soundfont-gm</code> Fluid (R3) General MIDI SoundFont (GM) package before running Piano Booster.</p>
+<h3 id="recommend-soundfont">Recommend SoundFont:</h3>
+<p>The recommend SoundFont is called <strong>FluidR3_GM</strong>. Use the Piano Booster ‘Setup/Midi Setup’ menu option and then click on the FluidSynth tab and use the load button to install the SoundFont file.</p>
+<ul>
+<li><a href="https://github.com/pianobooster/fluid-soundfont/releases/download/v3.1/FluidR3_GM.sf2">FluidR3_GM.sf2</a> – 142 MB General MIDI SoundFont.</li>
+</ul>
 <h3 id="md5-sums">MD5 sums</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode txt"><code class="sourceCode default"><a class="sourceLine" id="cb1-1" title="1">79daccb587ef872a37762af472de7ecf  PianoBooster-1.0.0-x86_64.AppImage</a>
 <a class="sourceLine" id="cb1-2" title="2">13b4cff404073c38a40b1db4f9a64b56  PianoBoosterInstall-SF-1.0.0.exe</a>
-<a class="sourceLine" id="cb1-3" title="3">0c42fa85cf39394c62f45937b56c32c8  PianoBooster-macOS-1.0.0.dmg</a></code></pre></div>
+<a class="sourceLine" id="cb1-3" title="3">0013743e1e2b7ce665cd513735c430b8  PianoBooster-macos-10.15-1.0.0.dmg</a>
+<a class="sourceLine" id="cb1-4" title="4">0c42fa85cf39394c62f45937b56c32c8  PianoBooster-macOS-1.0.0.dmg</a></code></pre></div>
 <h1 id="what-is-new">What is new</h1>
 <ul>
 <li>Piano Booster now includes the built-in Fluid Synth sound generator which is especially useful on Windows at this solves the problem with the Windows MS GM Wavetable Synthesizer that has an unacceptable delay.</li>
@@ -166,6 +188,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Also many other MIDI files that work with Piano Booster can be found by searching the web.</p>
 <h3 id="midi-keyboard">MIDI keyboard</h3>
 <p>To play along with Piano Booster you need a MIDI Piano Keyboard. To connect the MIDI keyboard open the Piano Booster MIDI setup menu and then select the MIDI input interface for your keyboard. (If you don’t have a MIDI keyboard you can still try out PianoBooster using the PC keyboard, ‘x’ is middle C – but a MIDI piano is recommend).</p>
+<h1 id="previous-releases">Previous releases</h1>
+<p>Previous release are available here:</p>
+<ul>
+<li><a href="https://github.com/pianobooster/PianoBooster/releases">https://github.com/pianobooster/PianoBooster/releases</a></li>
+<li><a href="https://sourceforge.net/projects/pianobooster/files/pianobooster/">https://sourceforge.net/projects/pianobooster/files/pianobooster/</a></li>
+</ul>
 
 </div>
 </div>

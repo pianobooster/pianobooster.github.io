@@ -136,6 +136,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="#there-is-no-sound-what-is-wrong">There is no sound, what is wrong?</a></li>
 <li><a href="#how-do-i-connect-a-midi-piano-keyboard">How do I connect a MIDI piano keyboard?</a></li>
 <li><a href="#somethings-wrong-i-have-tried-uninstalling-and-reinstalling">Something’s wrong, I have tried uninstalling and reinstalling!</a></li>
+<li><a href="#does-piano-booster-work-with-keys-that-light-up">Does Piano Booster work with keys that light up?</a></li>
 <li><a href="#will-piano-booster-work-with-a-real-piano">Will Piano Booster work with a real piano?</a></li>
 <li><a href="#does-piano-booster-work-with-jack">Does Piano Booster work with JACK?</a></li>
 <li><a href="#how-do-i-start-start-a-sound-generator-on-linux">How do I start start a sound generator on Linux?</a></li>
@@ -145,20 +146,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 id="where-are-the-music-files">Where are the music files?</h2>
 <p><strong>PianoBooster</strong> now comes with it’s own MIDI music course called <code>Booster Music</code>. The first time you run Piano Booster a music folder called <code>BoosterMusicBooks</code> is created in your <code>Music</code> folder on your PC. The Booster Music course is also available on the Piano Booster website. Also many other MIDI files that work with Piano Booster can be found by searching the web.</p>
 <h2 id="there-is-no-sound-what-is-wrong">There is no sound, what is wrong?</h2>
-<p>First insure that you have installed the latest version of Piano Booster that includes the integrated FluidSynth sound generator. To check this open the Piano Booster MIDI setup dialogue window and confirm there is a FluidSynth tab shown. You also need to ensure that there is a SoundFont file loaded, the recommended sound font is called <code>FluidR3_GM.sf2</code>.</p>
+<p>First insure that you have installed the latest version of Piano Booster that includes the integrated FluidSynth sound generator. To check this open the Piano Booster MIDI setup dialogue window and confirm there is a FluidSynth tab shown. You also need to ensure that there is a SoundFont file loaded, the recommended sound font is called <code>FluidR3_GM.sf2</code> and is available on the download page.</p>
 <h2 id="how-do-i-connect-a-midi-piano-keyboard">How do I connect a MIDI piano keyboard?</h2>
 <p>First plug the MIDI keyboard into your PC, for older MIDI keyboards that do not use USB MIDI you will need to use a MIDI adaptor. After connecting the MIDI keyboard open the Piano Booster MIDI setup menu and then select the MIDI input interface that matches your keyboard.</p>
 <h2 id="somethings-wrong-i-have-tried-uninstalling-and-reinstalling">Something’s wrong, I have tried uninstalling and reinstalling!</h2>
 <p>Try deleting the config file called ‘Piano Booster.ini’. On windows it is in <code>\Users\&lt;your user name&gt;\AppData\Roaming\PianoBooster\Piano Booster.ini</code> and Linux and macOS it is in <code>~/.config/PianoBooster/Piano Booster.ini</code></p>
+<h2 id="does-piano-booster-work-with-keys-that-light-up">Does Piano Booster work with keys that light up?</h2>
+<p>The Casio LK-265 and Yamaha EZ-220 MIDI keyboards have keys that light up indicating the next notes to play. PianoBooster does work with these keyboards, but you need to start pianobooster from the command line using the <code>--lights</code> option. For example on Windows you would start PianoBooster by typing the following in the command line window:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode txt"><code class="sourceCode default"><a class="sourceLine" id="cb1-1" title="1">&quot;\Program Files (x86)\Piano Booster-1.0.0\pianobooster.exe&quot; --lights</a></code></pre></div>
 <h2 id="will-piano-booster-work-with-a-real-piano">Will Piano Booster work with a real piano?</h2>
 <p>No, it will only work with a MIDI piano keyboard. As this is technically very difficult there are no plans to add this feature. A MIDI keyboard is recommended and then you can transfer your skills back to the real piano.</p>
 <h2 id="does-piano-booster-work-with-jack">Does Piano Booster work with JACK?</h2>
 <p>JACK is not required for Piano Booster to work correctly since Piano Booster can already talk directly to a MIDI sound generator and a MIDI keyboard. JACK is mainly used in advanced music studio setups where there are multiple different sound sources inputs and outputs that need connecting together. JACK is also required on BSD Unix. Piano Booster is not normally compiled with support for JACK so if you really want to use JACK you will need to recompile Piano Booster from the source code.</p>
 <h2 id="how-do-i-start-start-a-sound-generator-on-linux">How do I start start a sound generator on Linux?</h2>
 <p>If you don’t have a version of Piano Booster that includes the integrated FluidSynth (recommended) you can start FluidSynth manually. First install the FluidSynth <code>fluidsynth</code> and the GM sound font <code>fluid-soundfont-gm</code> packages and then run the following command line:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode txt"><code class="sourceCode default"><a class="sourceLine" id="cb1-1" title="1">fluidsynth -g 1.0 -a alsa -o midi.alsa_seq.id=fs2 /usr/share/sounds/sf2/FluidR3_GM.sf2</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode txt"><code class="sourceCode default"><a class="sourceLine" id="cb2-1" title="1">fluidsynth -g 1.0 -a pulseaudio -o midi.alsa_seq.id=fs2 /usr/share/sounds/sf2/FluidR3_GM.sf2</a></code></pre></div>
 <p>An alternatively you can used TiMidity by typing the following in a terminal window:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode txt"><code class="sourceCode default"><a class="sourceLine" id="cb2-1" title="1">timidity -iA -B2,8 -Os -EFreverb=0</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode txt"><code class="sourceCode default"><a class="sourceLine" id="cb3-1" title="1">timidity -iA -B2,8 -Os -EFreverb=0</a></code></pre></div>
 <h2 id="what-is-the-latency-fix">What is the latency fix?</h2>
 <p>The latency fix is no longer required since Piano Booster on Windows now includes the integrated FluidSynth sound generator which works in real-time and has low latency. Previously on windows the latency fix was required when using the MS GM Wavetable Synthesizer sound generator which has very high latency.</p>
 
